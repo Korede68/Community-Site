@@ -1,0 +1,166 @@
+@import url("../style.css");
+
+:root {
+  --festival-navy: #10254d;
+  --festival-yellow: #f4c93b;
+  --festival-green: #2f8f4e;
+}
+
+header.festival-header {
+  background: var(--festival-navy);
+  border-bottom: none;
+}
+header.festival-header .brand { color: #fff; }
+header.festival-header .back-link {
+  color: #cfe0ff;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+header.festival-header .back-link:hover { color: #fff; }
+header.festival-header nav.main-nav a { color: #e7edff; }
+header.festival-header nav.main-nav a:hover,
+header.festival-header nav.main-nav a[aria-current="page"] {
+  color: var(--festival-yellow);
+  border-bottom-color: var(--festival-yellow);
+}
+
+.festival-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+@media (max-width: 750px) {
+  .festival-hero { grid-template-columns: 1fr; }
+}
+.festival-hero img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.detail-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+  margin: 0.5rem 0;
+}
+.detail-row .label {
+  font-weight: 700;
+  color: var(--festival-navy);
+  min-width: 90px;
+}
+
+.tag-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.tag-row span {
+  background: var(--accent-light);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.cta-row { margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.btn-primary { background: var(--festival-navy); color: #fff; }
+.btn-primary:hover { background: #0a1a3a; }
+.btn-secondary { background: var(--accent-light); color: var(--accent); }
+.btn-secondary:hover { background: #d7ebe1; }
+
+.activity-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  margin-top: 1.1rem;
+  background: var(--surface);
+}
+.activity-block .time { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+.activity-block h3 { margin: 0.15rem 0 0.35rem; color: var(--festival-navy); }
+.activity-block p { margin: 0; color: var(--muted); }
+
+.after-hangout {
+  margin-top: 2rem;
+  border: 2px dashed var(--festival-green);
+  border-radius: var(--radius);
+  padding: 1.3rem;
+  background: #f2faf4;
+}
+.after-hangout h3 { margin-top: 0; color: var(--festival-green); }
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.resource-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.2rem;
+  background: var(--surface);
+}
+.resource-card .kind {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--festival-green);
+  font-weight: 700;
+}
+.resource-card h3 { margin: 0.3rem 0; color: var(--festival-navy); }
+.resource-card p { margin: 0 0 0.5rem; color: var(--muted); font-size: 0.92rem; }
+.resource-card .price { font-weight: 700; color: var(--ink); }
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+.faq-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--festival-navy);
+}
+.faq-item p { margin: 0.6rem 0 0; color: var(--muted); }
+
+.moderator-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: var(--festival-navy);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.2rem 1.4rem;
+  margin-top: 1rem;
+}
+.moderator-card .avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--festival-yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--festival-navy);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.moderator-card .btn { margin-top: 0.5rem; }
+
+.map-embed {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-top: 1.25rem;
+}
+.map-embed iframe { width: 100%; height: 100%; border: 0; }
